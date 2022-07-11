@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS sqlapi_user;
+CREATE TABLE sqlapi_user(
+    id INT PRIMARY KEY AUTO_INCREMENT  COMMENT '用户id',
+    username VARCHAR(255) NULL DEFAULT NULL  COMMENT '用户名',
+    password VARCHAR(255) NULL DEFAULT NULL  COMMENT '用户登录密码',
+    enabled  BOOLEAN      NOT NULL DEFAULT TRUE COMMENT '用户激活（1：激活，0：禁用）',
+    roles    VARCHAR(255) DEFAULT '["ROLE_USER"]' FORMAT JSON COMMENT '用户角色',
+    create_time TIMESTAMP(3)  NOT NULL DEFAULT CURRENT_TIMESTAMP(3) COMMENT '创建时间',
+    update_time TIMESTAMP(3)  NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3) COMMENT '更新时间'
+ );
+INSERT INTO sqlapi_user (username, roles, password, enabled)
+VALUES ('admin', '["ROLE_ADMIN","ROLE_USER"]', 'admin', TRUE)
