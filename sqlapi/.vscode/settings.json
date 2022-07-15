@@ -1,0 +1,5 @@
+{
+    // "java.jdt.ls.java.home": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.3.7-hotspot",
+    // "spring-boot.ls.java.home": "C:\\Program Files\\Java\\jdk1.8.0_161"
+    "java.settings.url": ".vscode/settings.prefs"
+}
