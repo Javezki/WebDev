@@ -9,5 +9,6 @@
 - The basic config is in application.properties
 
 ```bash
+ssh-keygen -t ed25519 -C "l3onL@javezki.com" #setup access key for github default to ~/.ssh/id_ed25519.pub
 
 ```
